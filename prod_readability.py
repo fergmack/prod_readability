@@ -10,21 +10,6 @@ twg = pd.Series(twg_full['body'])
 # Remove NaNs from dataset
 twg = twg.dropna()
 
-# read_stats = []
-# for i in twg:
-#     results = readability.getmeasures(i, lang='en')
-#     read_stats.append(results)
-
-# read_stats_list = []
-# for i in read_stats:
-# def read_stats(text):
-#     a = i['sentence info']['words']
-#     b = i['sentence info']['syll_per_word']
-#     c = i['sentence info']['syllables']
-#     d = i['sentence info']['long_words']
-#     e = i['sentence info']['complex_words']
-#     return a, b, c, d, e
-    
 def readability_stats(text):
     stats = readability.getmeasures(text, lang='en')
     a = stats['sentence info']['words']
@@ -81,9 +66,5 @@ titles.columns = ['Title']
 final_score = pd.concat([titles, read_stats_df, scores_df], axis = 1 )
 final_score
 
-
-
-
 # merge df_cd = pd.merge(df_SN7577i_c, df_SN7577i_d, how='inner', left_on = 'Id', right_on = 'Id')
-# https://datacarpentry.org/python-socialsci/11-joins/index.html
 
