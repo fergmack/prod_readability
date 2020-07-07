@@ -1,4 +1,4 @@
-# This codes loops through rows of texts files and rates the text based on Flesch Kincaid Readability Index, Coleman Liau Index etc. 
+# This code loops through rows of texts files and rates the text based on Flesch Kincaid Readability Index, Coleman Liau Index etc. 
 # It also provides other metrics such as number of complex words used etc. 
 
 import textstat
